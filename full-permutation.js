@@ -23,10 +23,12 @@ function premutation(arr) {
       }
      
       for (let i = 0; i < arr.length; i++) {
+          // 通过continue 避免重复
           if (path.includes(arr[i])) {
              continue;
           }
           path.push(arr[i]);
+          // 这里的递归正是子节点的关键
           dfs(path);
           path.pop();
       }
