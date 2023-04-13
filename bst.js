@@ -22,7 +22,7 @@ BST.prototype = {
             if (value < current.value) {
                 // 每次遍历把left作为当前节点
                 current = current.left;
-                // 如果current 已经为null, 说明已经到了根节点了
+                // 如果current 已经为null, 说明已经到了根节点了, 这里的目的就是为了一直找到根节点元素和链表操作是一致的
                 if (current === null) {
                     // 这个时候把对当前的节点进行赋值
                    parent.left = node;
